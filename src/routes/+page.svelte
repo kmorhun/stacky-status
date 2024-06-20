@@ -32,10 +32,16 @@
 
     let allProps = [
         {
-            systemName: "Mastodon",
+            systemName: "Mastodon (don't trust)",
             systemPort: 3000,
             mode: "Production",
             url: "https://beta.stacky.social/api/v1/timelines/public"
+        },
+        {
+            systemName: "Mastodon Frontend (don't trust)",
+            systemPort: 3000,
+            mode: "Production",
+            url: "https://beta.stacky.social"
         },
         {
             systemName: "Curate",

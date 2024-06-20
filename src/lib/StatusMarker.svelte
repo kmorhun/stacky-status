@@ -43,16 +43,17 @@
             axios.get(props.url)
                 .then((res) => {
                     if (res.status == 200) {
-                        console.log(props.systemName + " is connected :)")
+                        console.log(props.systemName + " is connected with status " + res.status + " :)")
                         success = true;
                     } else {
-                        console.log(res.status)
+                        console.log(res.status + "for " + props.systemName)
                         console.log(props.systemName + " is not connected :(")
                         success = false;
                     }
                 })
                 .catch((res) => {
-                    console.log(res)
+                    console.log("Error for " + props.systemName + ": " + res)
+                    // console.log(res)
                     success = false;
                 });
         }, 5000);
